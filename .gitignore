@@ -90,6 +90,7 @@ StyleCopReport.xml
 *.tmp
 *.tmp_proj
 *_wpftmp.csproj
+*.log*_i.h
 *.log
 *.vspscc
 *.vssscc
@@ -97,6 +98,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+*_i.h
 
 # Chutzpah Test files
 _Chutzpah*
@@ -230,7 +232,10 @@ _pkginfo.txt
 !?*.[Cc]ache/
 
 # Others
+sql/
 ClientBin/
+[Ss]tyle[Cc]op.*
+![Ss]tyle[Cc]op.targets
 ~$*
 *~
 *.dbmdl
@@ -262,6 +267,8 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
+App_Data/*.mdf
+App_Data/*.ldf
 *.mdf
 *.ldf
 *.ndf
@@ -361,3 +368,20 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# NuGet Packages Directory
+## TODO: If you have NuGet Package Restore enabled, uncomment the next line
+packages/
+## TODO: If the tool you use requires repositories.config, also uncomment the next line
+!packages/repositories.config
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+

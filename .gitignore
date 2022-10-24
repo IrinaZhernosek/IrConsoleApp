@@ -385,3 +385,6 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# My new folders and file
+IgnoreFolder/
+*.pdf

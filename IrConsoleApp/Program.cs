@@ -6,8 +6,10 @@ namespace IrynaZharnasek_SaysHello
     class Program {
         static void Main()
         {
-            Task1();
-            Task2();
+          /*  Task1();
+            Task2();*/
+            //Task3();
+            Task4();
         }
         /*{
             Console.WriteLine("Hi! What is your name?");
@@ -18,7 +20,7 @@ namespace IrynaZharnasek_SaysHello
             Console.WriteLine("Nice to meet you " + st1);
 
         } */
-        private static void Task1()
+       /* private static void Task1()
         {
             var num = 20 + 5;
             Console.WriteLine(num);
@@ -34,9 +36,25 @@ namespace IrynaZharnasek_SaysHello
 
             Console.WriteLine($"{Days} days are {Years} years {Month} months {Day} days");
             
+        }
+*/
+        //private static void Task3()
+        //{
+        //    Console.WriteLine("Enter any number:");
+        //    var Numb = (int)Convert.ToUInt32(Console.ReadLine());
+        //    var Res = Numb + 5;
+        //    Console.WriteLine($"The result is {Res}");
+
+        //}
+
+        private static void Task4()
+        {
+            Console.WriteLine("Enter any number:");
+            var Numb = (int)Convert.ToUInt32(Console.ReadLine());
+            var Res = Numb + 5;
+            Console.WriteLine($"The result is {Res}");
 
         }
-
     }
 }
 

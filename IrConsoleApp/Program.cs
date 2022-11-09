@@ -6,7 +6,7 @@ namespace IrynaZharnasek
     {
         public static void Main()
         {
-            Lecture4Homework.Task4();
+            Lecture4Homework.Task9();
         }
     }
 }

@@ -12,10 +12,10 @@ namespace IrynaZharnasek.Lecture4
         {
             Console.WriteLine("Enter any positive number:");
             int pNumb = Convert.ToInt32(Console.ReadLine());
-            int sum;
-            for (int i = 0; i < pNumb; i++)
-            {
-                sum = i + (i + 1);
+            int sum=0;
+            for (int i = 1; i <= pNumb; i++)
+            { 
+                sum += i;
                 Console.WriteLine($"The sum of numbers up to {pNumb} is:{sum}");
             }
         }
@@ -23,18 +23,22 @@ namespace IrynaZharnasek.Lecture4
         public static void Task2()
         {
             byte i = 0;
-            do
+            while (i < 10) 
             {
                 i++;
                 Console.WriteLine($"{i}*3={i * 3}");
             }
-            while (i < 10);
         }
 
         public static void Task3()
         {
             int[] massiv = new int[5] { 3, 5, 9, 8, 15 };
-            Console.WriteLine(massiv[0] * massiv[1] * massiv[2] * massiv[3] * massiv[4]);
+            int pr = 1;
+            foreach (int i in massiv)
+            {
+                pr *= i;
+                Console.WriteLine(pr);
+            }
         }
 
         public static void Task4()
@@ -64,19 +68,18 @@ namespace IrynaZharnasek.Lecture4
             mas[2] = c;
             foreach (string word in mas)
             {
-                if (word == "Hello")
+                if (word == "hello")
                 {
                     Console.WriteLine("Labas");
                 }
+                else Console.WriteLine(word);
             }
         }
 
         public static void Task6()
         {
             int[] mas = new int[5] { 1, 20, 3, 487, 556 };
-            foreach (int sum in mas) ;
             Console.WriteLine($"The sum of the first and the last elements of array is:{mas[0] + mas[^1]}");
-
         }
 
         public static void Task7()

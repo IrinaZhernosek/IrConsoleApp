@@ -84,6 +84,14 @@ namespace IrynaZharnasek.Lecture4
 
         public static void Task7()
         {
+            int[] mas = { 128, 2, 123, -2, 25, 25, -5, 7 };
+            Console.WriteLine($"Minimum number is {mas.Min()}");
+            Console.WriteLine($"Maximum number is {mas.Max()}");
+            Console.WriteLine($"Sum of the Minimum and Maximum nambers is {mas.Min() + mas.Max()} ");
+        }
+
+        public static void Task8()
+        {
             int[] mas = { 54, 2, 123, -2, 25, 25, -5, 128 };
             int temp;
             for (int i = 0; i < mas.Length - 1; i++)

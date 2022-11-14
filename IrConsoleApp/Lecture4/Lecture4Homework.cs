@@ -12,9 +12,9 @@ namespace IrynaZharnasek.Lecture4
         {
             Console.WriteLine("Enter any positive number:");
             int pNumb = Convert.ToInt32(Console.ReadLine());
-            int sum=0;
+            int sum = 0;
             for (int i = 1; i <= pNumb; i++)
-            { 
+            {
                 sum += i;
                 Console.WriteLine($"The sum of numbers up to {pNumb} is:{sum}");
             }
@@ -23,7 +23,7 @@ namespace IrynaZharnasek.Lecture4
         public static void Task2()
         {
             byte i = 0;
-            while (i < 10) 
+            while (i < 10)
             {
                 i++;
                 Console.WriteLine($"{i}*3={i * 3}");
@@ -84,10 +84,31 @@ namespace IrynaZharnasek.Lecture4
 
         public static void Task7()
         {
-            int[] mas = { 128, 2, 123, -2, 25, 25, -5, 7 };
-            Console.WriteLine($"Minimum number is {mas.Min()}");
-            Console.WriteLine($"Maximum number is {mas.Max()}");
-            Console.WriteLine($"Sum of the Minimum and Maximum nambers is {mas.Min() + mas.Max()} ");
+            int[] mas = {4, 128, 2, 123, -2, 25, 25, -5, 7 };
+            int max = mas[0];
+            int maxIndex = 0;
+            int min = mas[0];
+            int minIndex = 0;
+            //Console.WriteLine($"Minimum number is {mas.Min()}");
+            //Console.WriteLine($"Maximum number is {mas.Max()}");
+            //Console.WriteLine($"Sum of the Minimum and Maximum nambers is {mas.Min() + mas.Max()} ");
+            for (int i = 0; i < mas.Length; i++)
+            {
+                if (mas[i] > max)
+                {
+                    maxIndex = i;
+                    max = mas[i];
+                    Console.WriteLine($"max {maxIndex}");
+                }
+                else
+                {
+                    minIndex = i;
+                    min = mas[i];
+                    Console.WriteLine($"min {minIndex}");
+                }
+               // Console.WriteLine($"min {minIndex} max {maxIndex}");
+            }
+            Console.WriteLine($"The summa of min and max elements of array is: {mas[minIndex] + mas[maxIndex]}");
         }
 
         public static void Task8()

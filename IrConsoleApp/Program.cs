@@ -1,4 +1,5 @@
-﻿using IrynaZharnasek.Lecture4;
+﻿using ClassLibraryHW5;
+using IrynaZharnasek.Lecture4;
 
 namespace IrynaZharnasek
 {
@@ -6,7 +7,13 @@ namespace IrynaZharnasek
     {
         public static void Main()
         {
-            Lecture4Homework.Task7();
+            //Lecture4Homework.Task7();
+            Employees first = new Employees(position)
+            {
+                position = "scientist"
+            };
+            
+            first.Print();
         }
     }
 }

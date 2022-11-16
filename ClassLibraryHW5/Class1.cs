@@ -15,7 +15,24 @@
             this.position = position;
         }
 
-        public Employees() { age = 24; name = "Jon"; surname = "Golt"; position = "engineer"; }
+        //public Employees() { age = 24; name = "Jon"; surname = "Golt"; position = "engineer"; }
+
+        public Employees (int age)
+        {
+            this.age = age;
+        }
+        public Employees(string name)
+        {
+            this.name = name;
+        }
+        /*public Employees(string surname)
+        {
+            this.surname = surname;
+        }
+        public Employees(string position)
+        {
+            this.position = position;
+        }*/
 
         public void Print() => Console.WriteLine($"name {name} age:{age} surname:{surname}");
 

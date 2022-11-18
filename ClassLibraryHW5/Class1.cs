@@ -1,13 +1,15 @@
 ﻿namespace ClassLibraryHW5
 {
-    public class Employees
+    public class Employees //addin new class
     {
+        //defining of class parameters:
         public int age;
         public string name;
         public string surname;
         public string position;
 
-        public Employees(int age, string name, string surname, string position)
+        //the first constructor:
+        public Employees(int age = 0, string name = "underfined", string surname = "underfined", string position = "underfined")
         {
             this.age = age;
             this.name = name;
@@ -15,39 +17,38 @@
             this.position = position;
         }
 
-        //public Employees() { age = 24; name = "Jon"; surname = "Golt"; position = "engineer"; }
-
-        public Employees (int age)
+        //constructor 2 - only age:
+        public Employees (int age) : this(age, "underfind", "underfind", "underfind")
         {
-            this.age = age;
+
         }
-        public Employees(string name)
+        //constructor 3- only name:
+        public Employees (string name) : this(0, name, "underfind", "underfind")
         {
-            this.name = name;
+
         }
-        /*public Employees(string surname)
+
+        //constructor 4- name + surname:
+        public Employees (string name, string surname) : this(0, name, surname, "underfind")
         {
-            this.surname = surname;
+
         }
-        public Employees(string position)
+
+        //constructor 5 - name + surname + position:
+        public Employees(string name, string surname, string position) : this(0, name, surname, position)
         {
-            this.position = position;
-        }*/
 
-        public void Print() => Console.WriteLine($"name {name} age:{age} surname:{surname}");
-
-    }
-
-
-    /*public class Person
-    {
-        public string name = "Undefined";   // имя
-        public int age;                     // возраст
-
-        public void Print()
-        {
-            Person Tom = new Person();  // создание объекта класса Person
-            Console.WriteLine($"Имя: {name}  Возраст: {age}");
         }
-    }*/
+        //constructor 6 - by default:
+        public Employees()
+        {
+        
+        }
+
+    public void Print() => Console.WriteLine($"name: {name} surname:{surname} age:{age} position: {position}");
+
+}
+
+
+    
 }

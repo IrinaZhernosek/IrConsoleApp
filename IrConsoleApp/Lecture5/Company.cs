@@ -63,6 +63,7 @@ namespace IrynaZharnasek.Lecture5
         public Employee GetEmployee (int index) 
         {
             return arrayOfEmployees[index];
+            Console.WriteLine(GetEmployee(index));
         
         }
     }

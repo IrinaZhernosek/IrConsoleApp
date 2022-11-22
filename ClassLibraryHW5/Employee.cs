@@ -3,10 +3,10 @@
     public class Employee //adding new class
     {
         //defining of class parameters:
-        public int age;
-        public string name;
-        public string surname;
-        public string position;
+        private int age;
+        private string name;
+        private string surname;
+        private string position;
 
         //the first constructor:
         public Employee(int age = 0, string name = "underfined", string surname = "underfined", string position = "underfined")
@@ -44,7 +44,10 @@
         {
         
         }
+        public void ShowEmployeeInfo() => Console.WriteLine($"name: {name} surname:{surname} age:{age} position: {position}");
 
-    public void Print() => Console.WriteLine($"name: {name} surname:{surname} age:{age} position: {position}");
+        public void ShowEmployeeNameSurName () => Console.WriteLine($"name: {name} surname:{surname}");
+
+        public string GetPosition () => position;
     }  
 }

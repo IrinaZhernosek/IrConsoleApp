@@ -18,13 +18,13 @@ namespace IrynaZharnasek
             Employee emp6 = new();
             Employee emp7 = new(35, "Torrance", "Hullian", "Software Developer");
                        
-            emp1.Print();
-            emp2.Print();
-            emp3.Print();
-            emp4.Print();
-            emp5.Print(); 
-            emp6.Print();
-            emp7.Print();
+            emp1.ShowEmployeeInfo();
+            emp2.ShowEmployeeInfo();
+            emp3.ShowEmployeeInfo();
+            emp4.ShowEmployeeInfo();
+            emp5.ShowEmployeeInfo(); 
+            emp6.ShowEmployeeInfo();
+            emp7.ShowEmployeeInfo();
             Company iTechArt = new Company();
             //for edding new employees to Company
             iTechArt.AddNewEmployee(emp1);
@@ -41,7 +41,8 @@ namespace IrynaZharnasek
             //show employees Name/Surname by 'Software Daveliper' position:
             iTechArt.ShowEmployeesByPosition();
 
-            iTechArt.GetEmployee(6);
+            var returnedEmployee = iTechArt.GetEmployee(6);
+            returnedEmployee.ShowEmployeeInfo();
         }  
     }
 }

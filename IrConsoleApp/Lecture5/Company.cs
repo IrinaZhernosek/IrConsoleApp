@@ -23,6 +23,7 @@ namespace IrynaZharnasek.Lecture5
                 }
             }
         }
+
         public void ShowTotalNumbersOfEmployees ()
         {
             var count =0;
@@ -35,36 +36,37 @@ namespace IrynaZharnasek.Lecture5
                 }
              }
         }
+
         public void ShowAllEmployees()
         {
             for (var i = 0; i < arrayOfEmployees.Length; i++)
             {
                 if (arrayOfEmployees[i] != null)
                 {
-                    Console.WriteLine($"Name: {arrayOfEmployees[i].name}  Surname: {arrayOfEmployees[i].surname}");
+                    arrayOfEmployees[i].ShowEmployeeNameSurName();
                 }
                 else break;
             }
         }
+
         public void ShowEmployeesByPosition()
         {
             for (var i = 0; i < arrayOfEmployees.Length; i++)
             {
                 if (arrayOfEmployees[i] != null)
                 {
-                    if (arrayOfEmployees[i].position == "Software Developer")
+                    if (arrayOfEmployees[i].GetPosition() == "Software Developer")
                     {
-                        Console.WriteLine($"Name: {arrayOfEmployees[i].name}  Surname: {arrayOfEmployees[i].surname} Position: {arrayOfEmployees[i].position}"); 
+                        arrayOfEmployees[i].ShowEmployeeInfo();
                     }
                 }
                 else break;
             }
         }
+
         public Employee GetEmployee (int index) 
         {
             return arrayOfEmployees[index];
-            Console.WriteLine(GetEmployee(index));
-        
         }
     }
 }

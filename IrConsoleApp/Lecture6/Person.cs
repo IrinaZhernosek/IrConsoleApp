@@ -1,18 +1,10 @@
 ﻿using IrynaZharnasek.Lecture6;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IrynaZharnasek.Lecture6
 {
     public class Person
     {
         private int age;
-        private string name;
-        private string surname;
-        
         //defining access metod for Student's Age:
         public int Age
         {
@@ -27,31 +19,17 @@ namespace IrynaZharnasek.Lecture6
         }
 
         //defining access metod for name:
-        public string Name
-        {
-            set
-            {
-                this.name = value;
-            }
-            get { return this.name; }
-        }
+        public string Name { get; set; }
 
         //defining access metod for surname:
-        public string Surname
-        {
-            set
-            {
-                this.surname = value;
-            }
-            get { return this.surname; }
-        }
+        public string Surname { get; set; }
 
         //creating object of Class person through Constructor (all parameters):
         public Person(int age, string name = "underfined", string surname = "underfined")
         {
             this.age = age;
-            this.name = name;
-            this.surname = surname;
+            Name = name;
+            Surname = surname;
         }
 
         //creating object of Class Person through Constructor (only age):
@@ -77,6 +55,6 @@ namespace IrynaZharnasek.Lecture6
 
         }
 
-        public void showPersonInfo() => Console.WriteLine($"name: {name} surname:{surname} age:{Age}");
+        public void ShowPersonInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age}");
     }
 }

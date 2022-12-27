@@ -1,42 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
-namespace IrynaZharnasek.Lecture6
+﻿namespace IrynaZharnasek.Lecture6
 {
     public class Student : Person
     {
-        private string position;
-
-        public string Position
-        {
-            set
-            {
-                this.position = value;
-            }
-            get { return this.position; }
-        }
-
+        public string Position { get; set; }
         //creating Student through Constructor by default:
         public Student() {}
 
         //creating Student through Constructor (all parameters):
         public Student(int age, string name = "underfined", string surname = "underfined", string position = "underfined"): base(age, name, surname)
         {
-            this.position = position;
+            Position = position;
         }
 
         public Student(string name = "underfined", string surname = "underfined", string position = "underfined") : base(name, surname)
         {
-            this.position = position;
+            Position = position;
         }
 
-
-
-        public void showStudentInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} position: {position}");
-        
+        public void ShowStudentInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} position: {Position}");
     }
 }

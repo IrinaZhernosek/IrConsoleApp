@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IrynaZharnasek.Lecture6;
-
-namespace IrynaZharnasek.Lecture6
+﻿namespace IrynaZharnasek.Lecture6
 {
     public class Course
     {
         private string course;
+        private Mentor mentor;
 
-        private Student[] arrayOfStudents = new Student[100];
-        private Mentor[] arrayOfMentors = new Mentor[100];
+        private Student[] arrayOfStudents = new Student[10];
+        private Mentor[] arrayOfMentors = new Mentor[10];
+        private Course[] courses = new Course[10];
 
         public string CourseTitle
         {
@@ -47,6 +42,37 @@ namespace IrynaZharnasek.Lecture6
                 }
             }
         }
+        public Course GetCourseByTitle(string title)
+        {
+            for (var i = 0; i < courses.Length; i++)
+            {
+                if (courses[i].CourseTitle == title)
+                {
+                    return courses[i];
+                }
+            }
 
+            return null;
+        }
+
+        public void AssignMentorToCours(Mentor mentor)
+        {
+            if (mentor.Qualification == "development")
+            {
+                Course cSharp = GetCourseByTitle("C#");
+                cSharp.AddNewMentor(mentor);
+                Console.WriteLine($"Mentor {mentor.Name} assighed to {cSharp.CourseTitle}");
+            }
+            else if (mentor.Qualification == "qualityAssurance")
+            {
+                Course testing = GetCourseByTitle("Functional testing");
+                testing.AddNewMentor(mentor);
+                Console.WriteLine($"Mentor {mentor.Name} assighed to {testing.CourseTitle}");
+            }
+            else
+            {
+                Console.WriteLine($"No courses were found for {mentor.Name} qualification!");
+            }
+        }
     }
 }

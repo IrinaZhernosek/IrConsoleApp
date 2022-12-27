@@ -1,34 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IrynaZharnasek.Lecture6
+﻿namespace IrynaZharnasek.Lecture6
 {
     public class Mentor:Person
     {
-        private string qualification;
-
-        public string Qualification
-        {
-            set
-            {
-                this.qualification = value;
-            }
-            get { return this.qualification; }
-        }
+        public string Qualification { get; set; }
 
         //creating Mentor through Constructor by default:
-        public Mentor() { }
-
-        //creating Mentor through Constructor (all parameters):
-        public Mentor(int age, string name = "underfined", string surname = "underfined", string qualification = "underfined") : base(age, name, surname)
+        public Mentor()
         {
-            this.qualification = qualification;
         }
 
-        public void showMentorInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} qualification: {qualification}");
-        
+        //creating Mentor through Constructor (all parameters):
+        public Mentor(int age, string Name = "underfined", string Surname = "underfined", string qualification = "underfined") : base(age, Name, Surname)
+        {
+            Qualification = qualification;
+        }
+
+        public void ShowMentorInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} qualification: {Qualification}");
+
     }
 }

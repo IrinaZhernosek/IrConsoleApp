@@ -51,9 +51,9 @@
                     return _allCourses[i];
                 }
             }
-
             return null;
         }
+
         public void AssignStudentToCours(Student student)
         {
             if (student.Position == "developer")
@@ -73,6 +73,7 @@
                 Console.WriteLine($"No courses were found for {student.Name} position!");
             }
         }
+
         public void AssignMentorToCours(Mentor mentor)
         {
             if (mentor.Qualification == "development")
@@ -92,6 +93,7 @@
                 Console.WriteLine($"No courses were found for {mentor.Name} qualification!");
             }
         }
+
     }
 }
 

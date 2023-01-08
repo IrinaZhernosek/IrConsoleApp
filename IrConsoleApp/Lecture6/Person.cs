@@ -5,6 +5,7 @@ namespace IrynaZharnasek.Lecture6
     public class Person
     {
         private int age;
+
         //defining access metod for Student's Age:
         public int Age
         {
@@ -37,6 +38,7 @@ namespace IrynaZharnasek.Lecture6
         {
 
         }
+
         //creating object of Class Person through Constructor (only name):
         public Person(string name) : this(0, name, "underfind")
         {

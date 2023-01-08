@@ -1,6 +1,6 @@
 ﻿namespace IrynaZharnasek.Lecture6
 {
-    public class Mentor:Person
+    public class Mentor : Person
     {
         public string Qualification { get; set; }
 
@@ -16,6 +16,5 @@
         }
 
         public void ShowMentorInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} qualification: {Qualification}");
-
     }
 }

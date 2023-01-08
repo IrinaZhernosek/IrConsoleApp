@@ -33,6 +33,13 @@ namespace IrynaZharnasek
             udemy.AddNewCourse(course1);
             udemy.AddNewCourse(course2);
 
+            udemy.AddNewMentor(mentor1);
+            udemy.AddNewMentor(mentor2);
+
+            udemy.AddNewStudent(student1);
+            udemy.AddNewStudent(student2);
+            udemy.AddNewStudent(student3);
+
             udemy.AssignStudentToCours(student1);
             udemy.AssignStudentToCours(student2);
             udemy.AssignStudentToCours(student3);

@@ -15,6 +15,6 @@
             Qualification = qualification;
         }
 
-        public void ShowMentorInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} qualification: {Qualification}");
+        public override void ShowPersonInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} qualification: {Qualification}");
     }
 }

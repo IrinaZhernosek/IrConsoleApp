@@ -10,7 +10,7 @@
         }
 
         //creating Student through Constructor (all parameters):
-        public Student(int age, string name = "underfined", string surname = "underfined", string position = "underfined"): base(age, name, surname)
+        public Student(int age, string name = "underfined", string surname = "underfined", string position = "underfined") : base(age, name, surname)
         {
             Position = position;
         }
@@ -20,6 +20,6 @@
             Position = position;
         }
 
-        public void ShowStudentInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} position: {Position}");
+        public override void ShowPersonInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age} position: {Position}");
     }
 }

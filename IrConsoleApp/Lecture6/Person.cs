@@ -57,6 +57,6 @@ namespace IrynaZharnasek.Lecture6
 
         }
 
-        public void ShowPersonInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age}");
+        public virtual void ShowPersonInfo() => Console.WriteLine($"name: {Name} surname:{Surname} age:{Age}");
     }
 }

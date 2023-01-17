@@ -1,8 +1,4 @@
-﻿using ClassLibraryHW5;
-using IrynaZharnasek.Lecture4;
-using IrynaZharnasek.Lecture5;
-using System.Linq.Expressions;
-using System.Xml.Linq;
+﻿using IrynaZharnasek.Lecture6;
 
 namespace IrynaZharnasek
 {
@@ -10,39 +6,46 @@ namespace IrynaZharnasek
     {
         public static void Main()
         {
-            Employee emp1 = new(29, "Brian","Colier", "Product Owner");
-            Employee emp2 = new(30);
-            Employee emp3 = new("David");
-            Employee emp4 = new("Jennyfer", "Anderson");
-            Employee emp5 = new("Daniel", "Sharipo", "Software Developer");
-            Employee emp6 = new();
-            Employee emp7 = new(35, "Torrance", "Hullian", "Software Developer");
-                       
-            emp1.ShowEmployeeInfo();
-            emp2.ShowEmployeeInfo();
-            emp3.ShowEmployeeInfo();
-            emp4.ShowEmployeeInfo();
-            emp5.ShowEmployeeInfo(); 
-            emp6.ShowEmployeeInfo();
-            emp7.ShowEmployeeInfo();
-            Company iTechArt = new Company();
-            //for edding new employees to Company
-            iTechArt.AddNewEmployee(emp1);
-            iTechArt.AddNewEmployee(emp2);
-            iTechArt.AddNewEmployee(emp3);
-            iTechArt.AddNewEmployee(emp4);
-            iTechArt.AddNewEmployee(emp5);
-            iTechArt.AddNewEmployee(emp6);
-            iTechArt.AddNewEmployee(emp7);
-            //Show count of all employees:
-            iTechArt.ShowTotalNumbersOfEmployees();
-            //show Name/Surname for all employees:
-            iTechArt.ShowAllEmployees();
-            //show employees Name/Surname by 'Software Daveliper' position:
-            iTechArt.ShowEmployeesByPosition();
+            Student student1 = new Student("Iryna", "Zharnasek","tester");
+            student1.Age = 33;
+            student1.ShowPersonInfo();
 
-            var returnedEmployee = iTechArt.GetEmployee(6);
-            returnedEmployee.ShowEmployeeInfo();
-        }  
+            Student student2 = new Student("Paul", "Zelinsky", "developer");
+            student2.Age = 69;
+            student2.ShowPersonInfo();
+
+            Student student3 = new Student("Lena", "Melko", "sister");
+            student3.Age = 25;
+            student3.ShowPersonInfo();
+
+            Mentor mentor1 = new Mentor( 22, "Anna", "Maslova", "qualityAssurance");
+            mentor1.ShowPersonInfo();
+
+            Mentor mentor2 = new Mentor(23, "Alex", "Zaitcev", "development");
+            mentor2.ShowPersonInfo();
+
+            Course course1 = new Course("C#");
+            Console.WriteLine(course1.CourseTitle);
+            Course course2 = new Course("Functional testing");
+            Console.WriteLine(course2.CourseTitle);
+
+            CoursesLibrary udemy = new CoursesLibrary();
+            udemy.AddNewCourse(course1);
+            udemy.AddNewCourse(course2);
+
+            udemy.AddNewMentor(mentor1);
+            udemy.AddNewMentor(mentor2);
+
+            udemy.AddNewStudent(student1);
+            udemy.AddNewStudent(student2);
+            udemy.AddNewStudent(student3);
+
+            udemy.AssignStudentToCours(student1);
+            udemy.AssignStudentToCours(student2);
+            udemy.AssignStudentToCours(student3);
+
+            udemy.AssignMentorToCours(mentor1);
+            udemy.AssignMentorToCours(mentor2);
+        }
     }
 }

@@ -42,12 +42,11 @@
         //constructor 6 - by default:
         public Employee()
         {
-        
         }
         public void ShowEmployeeInfo() => Console.WriteLine($"name: {name} surname:{surname} age:{age} position: {position}");
 
         public void ShowEmployeeNameSurName () => Console.WriteLine($"name: {name} surname:{surname}");
 
         public string GetPosition () => position;
-    }  
+    } 
 }

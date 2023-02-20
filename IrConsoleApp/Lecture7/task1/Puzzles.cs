@@ -1,12 +1,12 @@
 ﻿namespace IrynaZharnasek.Lecture7.task1
 {
-    internal class Puzzles : Entertainments
+    public class Puzzles : Entertainments
     {
         public override string name { get; set; }
         public override string estimatedTime { get; set; }
-        int age;
-        int countOfDetails;
-        string detailsSize;
+        private int age;
+        private int countOfDetails;
+        private string detailsSize;
 
         public int Age
         {

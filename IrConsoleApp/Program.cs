@@ -2,6 +2,7 @@
 using IrynaZharnasek.Lecture4;
 using IrynaZharnasek.Lecture5;
 using IrynaZharnasek.Lecture7.task1;
+using IrynaZharnasek.Lecture7.task2;
 using System.Linq.Expressions;
 using System.Xml.Linq;
 namespace IrynaZharnasek
@@ -17,6 +18,15 @@ namespace IrynaZharnasek
             puzzle.gameInfo();
             boardgame.typeOfGame();
             boardgame.gameInfo();
+
+            Animals cat = new Animals();
+            cat.Name = "cat_Tom";
+            Person person1 = new Person("Ira", 33);
+            cat.CanJump();
+            cat.CanRun();
+            person1.CanRun();
+            person1.CanJump();
+
         }
     }
 }
